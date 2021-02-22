@@ -1,7 +1,7 @@
 const eris = require('eris');
 
 const bot = new eris.Client(process.env.ENV_TOKEN);
-let theFinalDate = new Date("12/Mar/2021 18:44:00");
+let theFinalDate = new Date("13/Mar/2021 18:44:00");
 let suffixes = [
     "Coño si...", 
     "Joder, que pesado,", 
