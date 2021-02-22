@@ -1,7 +1,6 @@
 const eris = require('eris');
-const packageJson = require('./package.json');
 
-const bot = new eris.Client(packageJson.token);
+const bot = new eris.Client(process.env.ENV_TOKEN);
 let theFinalDate = new Date("12/Mar/2021 18:44:00");
 let suffixes = [
     "Coño si...", 
