@@ -1,5 +1,7 @@
 const eris = require('eris');
-const bot = new eris.Client('ODEzNTAzMzcwNDUwMzA1MDI1.YDQQDQ.okYKDbJE_GXQlTI6EO7iNg1N3oA');
+const packageJson = require('./package.json');
+
+const bot = new eris.Client(packageJson.token);
 let theFinalDate = new Date("12/Mar/2021 18:44:00");
 let suffixes = [
     "Coño si...", 
@@ -19,6 +21,9 @@ function getMessage() {
     let currentDate = new Date();
     let diff = Math.abs(currentDate.getTime() - theFinalDate.getTime());
     let numberOfDays = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    if(numberOfDays == 0)
+        return "ESSSS HOOOOOOOOOOOOOOOYYY!!! JODEEEEEEER!"
 
     return `${getRandomSuffix()} te queda como ${numberOfDays} dias joder.`
 }
