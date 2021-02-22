@@ -13,14 +13,6 @@ let suffixes = [
     "Afsxafsxafsxafsx,"
 ];
 
-const http = require('http');
-http.createServer((req, res) => {
-res.writeHead(200, {
-    'Content-type': 'text/plain'
-});
-
-}).listen(4000);
-
 function getRandomSuffix() {
     return suffixes[Math.floor(Math.random() * suffixes.length)];
 }
@@ -31,9 +23,9 @@ function getMessage() {
     let numberOfDays = Math.floor(diff / (1000 * 60 * 60 * 24));
 
     if(numberOfDays == 0)
-        return "ESSSS HOOOOOOOOOOOOOOOYYY!!! JODEEEEEEER!"
+        return "ESSSS HOOOOOOOOOOOOOOOYYY!!! JODEEEEEEER!";
 
-    return `${getRandomSuffix()} te queda como ${numberOfDays} dias joder.`
+    return `${getRandomSuffix()} te queda como ${numberOfDays} dias joder.`;
 }
 
 bot.on('messageCreate', async (msg) => {
